@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="weatherStationApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Station</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/weather_icon.png"/>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/measures.css" />
+</head>
+<body>
+
+<div ui-view>
+      Weather Station, loading...
+</div>
+
+    <script src="/scripts/angular.js"></script>
+    <script src="/scripts/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="/measures/measures.controller.js"></script>
+    <script src="/measures/measures.service.js"></script>
+    <script src="/common/httpService.js"></script>
+</body>
+</html>

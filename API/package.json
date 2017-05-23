@@ -1,0 +1,27 @@
+{
+  "name": "wheater.station.api",
+  "version": "1.0.0",
+  "description": "Wheater Station API ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wheater",
+    "station",
+    "api"
+  ],
+  "author": "Marcos Rodríguez Ovares",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-ui-router": "^0.3.1",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+  }
+}

@@ -1,0 +1,55 @@
+<div>
+    <div  id ="loadingDiv" ng-if = "!measures.ready">
+        <img id ="loading" src="../resources/colors.gif">
+    </div>
+
+    <div ng-show = "measures.ready">
+        <header class="header">
+            <h1>Weather Station</h1>
+            <p>with Arduino, AngularJS, NodeJS and AWS</p>
+        </header>
+
+        <div class="main">
+            <table class="table">
+                <tr>
+                    <th>Estación</th>
+                    <th>Altitud(m)</th>
+                    <th>Altitud(pies)</th>
+                    <th>Presión</th>
+                    <th>Temperatura(C)</th>
+                    <th>Temperatura(F)</th>
+                    <th>Humedad</th>
+                    <th>Luminosidad</th>
+                    <th>Dirección Viento</th>
+                    <th>Velocidad Viento</th>
+                    <th>Lluvia</th>
+                    <th>Lluvia Diaria</th>
+                    <th>Fecha y hora</th>
+                </tr>
+                <tr ng-repeat = "item in measures.weatherMeasures">
+                    <td>{{item.idStation}}</td>
+                    <td>{{item.altitudeM}}</td>
+                    <td>{{item.altitudeFt}}</td>
+                    <td>{{item.pressure}}</td>
+                    <td>{{item.temperatureC}}'C</td>
+                    <td>{{item.temperatureF}}'F</td>
+                    <td>{{item.humidity}}%</td>
+                    <td>{{item.light}}</td>
+                    <td>{{item.winddir}}º</td>
+                    <td>{{item.windspeedmph}} mph</td>
+                    <td>{{item.rain*0.2794}}mm</td>
+                    <td>{{item.dailyRain*0.2794}}mm</td>
+                    <td>{{item.date | date:'medium'}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <h6>Weather Station</h6>
+            <h6>Marcos Rodríguez</h6>
+            <h6>2016</h6>
+        </footer>
+
+    </div>
+
+</div>
